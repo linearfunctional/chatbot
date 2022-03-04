@@ -24,7 +24,7 @@ def split_to_sent(p):
     return tokenize.sent_tokenize(p)
 data_sents = split_to_sent(data)
 
-!pip install sentence_transformers -q
+# !pip install sentence_transformers -q
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 s_model = SentenceTransformer('bert-base-nli-mean-tokens').to("cuda")
